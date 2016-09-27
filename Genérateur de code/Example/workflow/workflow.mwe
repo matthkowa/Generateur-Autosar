@@ -1,0 +1,16 @@
+<workflow>
+  <component class="org.eclipse.xtend.typesystem.xsd.XMLReader">
+    <modelSlot value="model" />
+    <uri value="model/Model.arxml" />
+    <metaModel id="mm"
+      class="org.eclipse.xtend.typesystem.xsd.XSDMetaModel">
+      <schemaFile value="metamodel/AUTOSAR_4-2-2.xsd" />
+    </metaModel>
+  </component>  
+  <component class="org.eclipse.xpand2.Generator">
+    <metaModel idRef="mm" />
+    <expand value="template::lib::os_app_define_h::Root FOR model" />
+    <outlet path="src-gen/lib/autosar/app" />
+  </component>
+  </component>            
+</workflow>
